@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:plants/screens/home/home_screen.dart';
+
+import 'constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -8,25 +11,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Plants',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: kPrimaryColor,
+        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Page(),
+      home: HomeScreen(),
     );
-  }
-}
-
-class Page extends StatefulWidget {
-  @override
-  _PageState createState() => _PageState();
-}
-
-class _PageState extends State<Page> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold();
   }
 }
