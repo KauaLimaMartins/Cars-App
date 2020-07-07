@@ -14,6 +14,8 @@ dependencies:
 
     cupertino_icons: ^0.1.3
     flutter_svg: ^0.17.4 #it helps us to use SVG
+    bottom_navy_bar: ^5.4.0
+    flutter_launcher_icons: ^0.7.5
 
 dev_dependencies:
     flutter_test:
@@ -25,3 +27,8 @@ flutter:
     assets:
         - assets/icons/
         - assets/images/
+
+flutter_icons:
+    android: true
+    ios: true
+    image_path: 'assets/icons/app_icon.png'

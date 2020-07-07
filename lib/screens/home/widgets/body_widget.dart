@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:plants/constants.dart';
 
 import 'header_with_search_box_widget.dart';
+import 'title_with_btn_widget.dart';
+import 'promotion_cars_widget.dart';
+import 'featured_cars_widget.dart';
 
 class BodyWidget extends StatelessWidget {
   @override
@@ -15,6 +17,35 @@ class BodyWidget extends StatelessWidget {
       child: Column(
         children: <Widget>[
           HeaderWithSearchBox(size: size),
+          TitleWithBtn(
+            title: 'Promoções',
+            press: () {},
+          ),
+          PromotionCars(),
+          TitleWithBtn(
+            title: 'SUV',
+            press: () {},
+          ),
+          FeaturedCars(
+            carType: 'SUV',
+          ),
+          SizedBox(height: kDefaultPadding),
+          TitleWithBtn(
+            title: 'Sedan',
+            press: () {},
+          ),
+          FeaturedCars(
+            carType: 'Sedan',
+          ),
+          SizedBox(height: kDefaultPadding),
+          TitleWithBtn(
+            title: 'Hatch',
+            press: () {},
+          ),
+          FeaturedCars(
+            carType: 'Hatch',
+          ),
+          SizedBox(height: kDefaultPadding),
         ],
       ),
     );
